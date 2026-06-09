@@ -1,45 +1,10 @@
 flowchart TB
 
-    Agent["SkillForge Copilot Agent"]
+    Knowledge["Synthetic Knowledge Sources<br/><br/>Team Atlas Readiness Report<br/>AZ-204 Certification Guide<br/>Readiness Playbook<br/>Workforce Learning Policy<br/>Assessment Blueprint"]
 
-    TeamReport["team-atlas-readiness-report.md"]
-    CertGuide["certification-guide-az-204.md"]
-    Playbook["readiness-playbook.md"]
-    Policy["workforce-learning-policy.md"]
-    Blueprint["assessment-blueprint.md"]
+    Agent["SkillForge Copilot Agent<br/><br/>Copilot Studio<br/>Instructions + Topics + Responsible AI Boundaries"]
 
-    TeamReview["Team Readiness Review"]
-    LearnerSummary["Learner Readiness Summary"]
-    ManagerBriefing["Manager Briefing"]
-    FollowUp["Follow-up Message"]
-    SafetyResponse["Responsible AI Boundary Response"]
-    ReadinessChecks["Readiness Check Guidance"]
+    Responses["Manager-Facing Responses<br/><br/>Team Readiness Review<br/>Learner Readiness Summary<br/>Manager Briefing<br/>Follow-up Message<br/>Responsible AI Boundary Response"]
 
-    TeamReport --> Agent
-    CertGuide --> Agent
-    Playbook --> Agent
-    Policy --> Agent
-    Blueprint --> Agent
-
-    Agent --> TeamReview
-    Agent --> LearnerSummary
-    Agent --> ManagerBriefing
-    Agent --> FollowUp
-    Agent --> SafetyResponse
-    Agent --> ReadinessChecks
-
-    TeamReport -.-> TeamReview
-    TeamReport -.-> LearnerSummary
-    TeamReport -.-> ManagerBriefing
-
-    CertGuide -.-> LearnerSummary
-    CertGuide -.-> ReadinessChecks
-
-    Playbook -.-> TeamReview
-    Playbook -.-> ManagerBriefing
-    Playbook -.-> FollowUp
-
-    Policy -.-> FollowUp
-    Policy -.-> SafetyResponse
-
-    Blueprint -.-> ReadinessChecks
+    Knowledge --> Agent
+    Agent --> Responses
