@@ -8,6 +8,16 @@ The project is designed for the **Enterprise Agents for Microsoft 365 Copilot** 
 
 ---
 
+## Demo Video
+
+Demo video link:
+
+```text
+REPLACE_WITH_YOUTUBE_OR_VIMEO_LINK
+```
+
+The demo video shows the Copilot Studio agent configuration, synthetic knowledge grounding, manager-facing readiness responses, topic routing, and Responsible AI boundary behavior.
+
 ## Overview
 
 Managers responsible for certification programs often need quick answers to practical readiness questions:
@@ -20,6 +30,70 @@ Managers responsible for certification programs often need quick answers to prac
 - What workforce decisions must remain under human review?
 
 SkillForge Copilot Agent provides a structured Copilot experience for these scenarios. It is grounded in synthetic readiness documents, follows defined conversation topics and includes Responsible AI boundaries for workforce-related recommendations.
+
+---
+
+## Copilot Studio Agent Evidence
+
+The following screenshots show the Copilot Studio agent configuration and demo behavior.
+
+### Agent Overview
+
+![Copilot Studio Agent Overview](screenshots/01-copilot-studio-agent-overview.png)
+
+The agent overview shows the SkillForge Copilot Agent configured in Copilot Studio with its name, icon, instructions and test panel.
+
+### Agent Instructions
+
+![Agent Instructions](screenshots/02-agent-instructions.png)
+
+The instructions define the agent role, knowledge usage, response style, advisory-only behavior and Responsible AI boundaries.
+
+### Knowledge Sources
+
+![Knowledge Sources](screenshots/03-knowledge-sources.png)
+
+The agent uses five approved synthetic knowledge sources. Web search is disabled so answers are grounded in the uploaded project knowledge.
+
+### Topics Overview
+
+![Topics Overview](screenshots/04-topics-overview.png)
+
+The configured topics cover the main manager-facing readiness workflows.
+
+---
+
+## Demo Screenshots
+
+### Team Readiness Review
+
+![Team Readiness Review Test](screenshots/05-team-readiness-review-test.png)
+
+The agent identifies Team Atlas readiness for AZ-204, including Jamie Rivera as an at-risk learner, priority gaps and advisory manager actions.
+
+### Learner Readiness Summary
+
+![Learner Readiness Summary Test](screenshots/06-learner-readiness-summary-test.png)
+
+The agent explains why Jamie Rivera is classified as at risk, including readiness score, threshold, skill gaps, targeted learning effort and weekly capacity.
+
+### Manager Briefing
+
+![Manager Briefing Test](screenshots/07-manager-briefing-test.png)
+
+The agent generates an executive-style manager briefing with summary, key risks and recommended advisory actions.
+
+### Follow-up Message
+
+![Follow-up Message Test](screenshots/08-follow-up-message-test.png)
+
+The agent drafts a supportive learner follow-up message for human review.
+
+### Responsible AI Boundary
+
+![Responsible AI Boundary Test](screenshots/09-responsible-ai-boundary-test.png)
+
+The agent refuses unsafe workforce decision requests, such as promotion decisions, and redirects to safe readiness support.
 
 ---
 
@@ -79,6 +153,7 @@ The repository documents:
 - architecture
 - demo script
 - Mermaid diagrams
+- Copilot Studio screenshots
 
 This makes the agent behavior transparent and reproducible.
 
@@ -129,6 +204,16 @@ SkillForge-Copilot-Agent/
 │   ├── responsible-ai-boundary.mmd
 │   └── knowledge-grounding-map.mmd
 ├── screenshots/
+│   ├── README.md
+│   ├── 01-copilot-studio-agent-overview.png
+│   ├── 02-agent-instructions.png
+│   ├── 03-knowledge-sources.png
+│   ├── 04-topics-overview.png
+│   ├── 05-team-readiness-review-test.png
+│   ├── 06-learner-readiness-summary-test.png
+│   ├── 07-manager-briefing-test.png
+│   ├── 08-follow-up-message-test.png
+│   └── 09-responsible-ai-boundary-test.png
 └── exports/
 ```
 
@@ -166,6 +251,14 @@ The `topics/` folder defines the main agent conversation patterns.
 | `manager-briefing.md` | Generates manager-ready executive briefings. |
 | `follow-up-message.md` | Drafts learner follow-up messages. |
 | `responsible-ai-boundary.md` | Handles unsafe or out-of-scope workforce decision requests. |
+
+The same workflows are also configured as Copilot Studio topics:
+
+- Team Readiness Review
+- Learner Readiness Summary
+- Manager Briefing
+- Follow-up Message
+- Responsible AI Boundary
 
 ---
 

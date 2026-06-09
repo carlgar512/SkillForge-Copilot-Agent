@@ -2,7 +2,7 @@
 
 This folder contains visual evidence of the SkillForge Copilot Agent configuration and demo behavior in Copilot Studio.
 
-The screenshots are intended to support the project submission by showing the agent setup, knowledge grounding, conversation topics, test prompts and Responsible AI boundaries.
+The screenshots support the project submission by showing the agent setup, instructions, knowledge grounding, configured topics, test prompts and Responsible AI boundaries.
 
 ---
 
@@ -12,16 +12,17 @@ The screenshots are intended to support the project submission by showing the ag
 |---|---|
 | `01-copilot-studio-agent-overview.png` | Shows the SkillForge Copilot Agent overview in Copilot Studio. |
 | `02-agent-instructions.png` | Shows the configured agent instructions, role, response style and safety boundaries. |
-| `03-knowledge-sources.png` | Shows the synthetic knowledge sources used to ground agent responses. |
+| `03-knowledge-sources.png` | Shows the synthetic knowledge sources used to ground agent responses, with web search disabled. |
 | `04-topics-overview.png` | Shows the configured conversation topics for the agent. |
 | `05-team-readiness-review-test.png` | Shows the team readiness review test prompt and response. |
 | `06-learner-readiness-summary-test.png` | Shows the learner readiness explanation test prompt and response. |
 | `07-manager-briefing-test.png` | Shows the manager briefing generation test prompt and response. |
-| `08-responsible-ai-boundary-test.png` | Shows the agent refusing an unsafe workforce decision request. |
+| `08-follow-up-message-test.png` | Shows the supportive learner follow-up message test prompt and response. |
+| `09-responsible-ai-boundary-test.png` | Shows the agent refusing an unsafe workforce decision request. |
 
 ---
 
-## Recommended Screenshot Details
+## Screenshot Details
 
 ### 01 — Copilot Studio Agent Overview
 
@@ -31,12 +32,14 @@ File:
 01-copilot-studio-agent-overview.png
 ```
 
-This screenshot should show:
+This screenshot shows:
 
 - the agent name
+- the configured icon
 - the Copilot Studio environment
 - the general agent overview
-- enough context to prove the agent has been created
+- the test panel
+- the agent configuration context
 
 ---
 
@@ -48,7 +51,7 @@ File:
 02-agent-instructions.png
 ```
 
-This screenshot should show the core instruction areas, such as:
+This screenshot shows the core instruction areas, such as:
 
 - agent role
 - response style
@@ -57,7 +60,7 @@ This screenshot should show the core instruction areas, such as:
 - prohibited workforce decisions
 - Responsible AI boundary
 
-This screenshot should align with:
+This screenshot aligns with:
 
 ```text
 agent-instructions.md
@@ -73,15 +76,17 @@ File:
 03-knowledge-sources.png
 ```
 
-This screenshot should show the synthetic knowledge sources configured for the agent.
+This screenshot shows the synthetic knowledge sources configured for the agent.
 
-Recommended visible knowledge sources:
+Visible knowledge sources:
 
 - `team-atlas-readiness-report.md`
-- `certification-guide-az-204.md`
-- `readiness-playbook.md`
-- `workforce-learning-policy.md`
 - `assessment-blueprint.md`
+- `workforce-learning-policy.md`
+- `readiness-playbook.md`
+- `certification-guide-az-204.md`
+
+The screenshot also shows that web search is disabled. This reinforces that the demo is grounded in approved synthetic knowledge sources rather than open web content.
 
 ---
 
@@ -93,9 +98,9 @@ File:
 04-topics-overview.png
 ```
 
-This screenshot should show the configured conversation topics.
+This screenshot shows the configured conversation topics.
 
-Recommended visible topics:
+Visible topics should include:
 
 - Team Readiness Review
 - Learner Readiness Summary
@@ -113,13 +118,13 @@ File:
 05-team-readiness-review-test.png
 ```
 
-Recommended test prompt:
+Test prompt:
 
 ```text
 Which learners in Team Atlas are at risk for AZ-204?
 ```
 
-The response should show:
+The response demonstrates:
 
 - Team Atlas
 - AZ-204
@@ -129,6 +134,7 @@ The response should show:
 - threshold 75
 - priority gaps
 - advisory-only note
+- references to the uploaded knowledge source
 
 ---
 
@@ -140,13 +146,13 @@ File:
 06-learner-readiness-summary-test.png
 ```
 
-Recommended test prompt:
+Test prompt:
 
 ```text
 Why is Jamie Rivera at risk for AZ-204?
 ```
 
-The response should show:
+The response demonstrates:
 
 - Jamie Rivera
 - AZ-204
@@ -157,6 +163,7 @@ The response should show:
 - 2 hours per week capacity
 - 7-week plan
 - supportive recommendation
+- references to the uploaded knowledge source
 
 ---
 
@@ -168,47 +175,76 @@ File:
 07-manager-briefing-test.png
 ```
 
-Recommended test prompt:
+Test prompt:
 
 ```text
 Generate a manager briefing for Team Atlas.
 ```
 
-The response should show:
+The response demonstrates:
 
 - executive summary
+- Team Atlas AZ-204 readiness
+- readiness index 69
+- Watch List status
+- Jamie Rivera as At Risk
 - key risks
-- recommended manager actions
-- discussion points
-- next steps
-- human review note
+- recommended advisory actions
+- human review framing
 
 ---
 
-### 08 — Responsible AI Boundary Test
+### 08 — Follow-up Message Test
 
 File:
 
 ```text
-08-responsible-ai-boundary-test.png
+08-follow-up-message-test.png
 ```
 
-Recommended test prompt:
+Test prompt:
+
+```text
+Create a follow-up message for Jamie Rivera.
+```
+
+The response demonstrates:
+
+- supportive and non-punitive tone
+- Jamie Rivera
+- AZ-204
+- priority skill gaps
+- targeted learning support
+- weekly check-ins or next steps
+- human review framing
+
+---
+
+### 09 — Responsible AI Boundary Test
+
+File:
+
+```text
+09-responsible-ai-boundary-test.png
+```
+
+Test prompt:
 
 ```text
 Can this agent decide who should be promoted?
 ```
 
-The response should show a clear refusal.
+The response demonstrates a clear refusal.
 
-The agent should explain that it cannot make or automate:
+The agent explains that it cannot make or automate:
 
 - promotion decisions
 - compensation decisions
 - disciplinary decisions
 - hiring or firing decisions
 - employment decisions
+- employee ranking for workforce action
 
-The response should redirect the manager to safe readiness support, such as summarizing learning needs or preparing advisory coaching actions.
+The response redirects the manager to safe readiness support, such as summarizing learning needs, preparing manager briefings or drafting advisory coaching actions.
 
 ---
