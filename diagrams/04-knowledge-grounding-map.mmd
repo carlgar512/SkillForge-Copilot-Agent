@@ -1,0 +1,45 @@
+flowchart TB
+
+    Agent["SkillForge Copilot Agent"]
+
+    TeamReport["team-atlas-readiness-report.md"]
+    CertGuide["certification-guide-az-204.md"]
+    Playbook["readiness-playbook.md"]
+    Policy["workforce-learning-policy.md"]
+    Blueprint["assessment-blueprint.md"]
+
+    TeamReview["Team Readiness Review"]
+    LearnerSummary["Learner Readiness Summary"]
+    ManagerBriefing["Manager Briefing"]
+    FollowUp["Follow-up Message"]
+    SafetyResponse["Responsible AI Boundary Response"]
+    ReadinessChecks["Readiness Check Guidance"]
+
+    TeamReport --> Agent
+    CertGuide --> Agent
+    Playbook --> Agent
+    Policy --> Agent
+    Blueprint --> Agent
+
+    Agent --> TeamReview
+    Agent --> LearnerSummary
+    Agent --> ManagerBriefing
+    Agent --> FollowUp
+    Agent --> SafetyResponse
+    Agent --> ReadinessChecks
+
+    TeamReport -.-> TeamReview
+    TeamReport -.-> LearnerSummary
+    TeamReport -.-> ManagerBriefing
+
+    CertGuide -.-> LearnerSummary
+    CertGuide -.-> ReadinessChecks
+
+    Playbook -.-> TeamReview
+    Playbook -.-> ManagerBriefing
+    Playbook -.-> FollowUp
+
+    Policy -.-> FollowUp
+    Policy -.-> SafetyResponse
+
+    Blueprint -.-> ReadinessChecks

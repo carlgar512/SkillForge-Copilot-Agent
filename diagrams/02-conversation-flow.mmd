@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor Manager as Manager / Learning Lead
+    participant Copilot as Microsoft 365 Copilot Experience
+    participant Agent as SkillForge Copilot Agent
+    participant Topic as Conversation Topic
+    participant Knowledge as Synthetic Knowledge Sources
+    participant Boundary as Responsible AI Boundary
+    participant Output as Manager-Ready Output
+
+    Manager->>Copilot: Ask readiness question
+    Copilot->>Agent: Route request to enterprise agent
+    Agent->>Topic: Match supported conversation flow
+    Topic->>Knowledge: Retrieve approved synthetic context
+    Knowledge-->>Agent: Return readiness facts and policy context
+    Agent->>Boundary: Apply advisory-only and human review rules
+    Boundary-->>Agent: Confirm safe response framing
+    Agent->>Output: Generate grounded answer
+    Output-->>Manager: Return summary, briefing or follow-up draft

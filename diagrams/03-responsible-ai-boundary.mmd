@@ -1,0 +1,37 @@
+flowchart TB
+
+    Request["Manager Request"]
+
+    ScopeCheck{"Is the request about\ncertification readiness or learning support?"}
+
+    Supported["Supported Readiness Request"]
+
+    Unsafe{"Does the request ask for\nhiring, promotion, compensation,\ndisciplinary or employment decision?"}
+
+    Knowledge["Use Synthetic Knowledge Sources"]
+
+    Response["Generate Manager-Ready Advisory Response"]
+
+    HumanReview["Include Human Review Boundary"]
+
+    Refusal["Safe Refusal"]
+
+    Redirect["Redirect to Readiness Support"]
+
+    Final["Final Agent Response"]
+
+    Request --> ScopeCheck
+
+    ScopeCheck -->|Yes| Supported
+    ScopeCheck -->|No| Unsafe
+
+    Supported --> Unsafe
+
+    Unsafe -->|No| Knowledge
+    Knowledge --> Response
+    Response --> HumanReview
+    HumanReview --> Final
+
+    Unsafe -->|Yes| Refusal
+    Refusal --> Redirect
+    Redirect --> Final

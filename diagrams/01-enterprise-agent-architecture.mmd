@@ -1,0 +1,42 @@
+flowchart TB
+
+    Manager["Manager / Learning Lead"]
+
+    Copilot["Microsoft 365 Copilot Experience"]
+
+    Agent["SkillForge Copilot Agent\nCopilot Studio"]
+
+    Instructions["Agent Instructions\nagent-instructions.md"]
+
+    Topics["Conversation Topics\ntopics/*.md"]
+
+    Knowledge["Synthetic Knowledge Sources\nknowledge/*.md"]
+
+    Policy["Responsible AI Boundaries\nAdvisory-only policy"]
+
+    Outputs["Manager-Ready Outputs"]
+
+    TeamReview["Team Readiness Review"]
+    LearnerSummary["Learner Readiness Summary"]
+    Briefing["Manager Briefing"]
+    FollowUp["Learner Follow-up Message"]
+    SafetyResponse["Safety Boundary Response"]
+
+    Manager --> Copilot
+    Copilot --> Agent
+
+    Agent --> Instructions
+    Agent --> Topics
+    Agent --> Knowledge
+    Agent --> Policy
+
+    Instructions --> Outputs
+    Topics --> Outputs
+    Knowledge --> Outputs
+    Policy --> Outputs
+
+    Outputs --> TeamReview
+    Outputs --> LearnerSummary
+    Outputs --> Briefing
+    Outputs --> FollowUp
+    Outputs --> SafetyResponse
