@@ -317,25 +317,25 @@ The project includes Mermaid source diagrams in `diagrams/` and exported PNG ver
 
 ### Enterprise Agent Architecture
 
-![Enterprise Agent Architecture](diagrams/01-enterprise-agent-architecture.png)
+![Enterprise Agent Architecture](exports/01-enterprise-agent-architecture.png)
 
 This diagram shows the high-level flow from the manager through the Microsoft 365 Copilot experience into the SkillForge Copilot Agent, including instructions, topics, knowledge sources and Responsible AI boundaries.
 
 ### Conversation Flow
 
-![Conversation Flow](diagrams/02-conversation-flow.png)
+![Conversation Flow](exports/02-conversation-flow.png)
 
 This diagram shows how a manager prompt is routed through the agent, matched to a topic, grounded in synthetic knowledge sources and returned as a manager-ready response.
 
 ### Responsible AI Boundary
 
-![Responsible AI Boundary](diagrams/03-responsible-ai-boundary.png)
+![Responsible AI Boundary](exports/03-responsible-ai-boundary.png)
 
 This diagram shows how the agent separates supported readiness and learning support requests from unsafe workforce decision requests such as promotion, compensation, disciplinary or employment decisions.
 
 ### Knowledge Grounding Map
 
-![Knowledge Grounding Map](diagrams/04-knowledge-grounding-map.png)
+![Knowledge Grounding Map](exports/04-knowledge-grounding-map.png)
 
 This diagram shows how the approved synthetic knowledge sources ground the agent and support manager-facing outputs such as readiness reviews, learner summaries, briefings, follow-up messages and safety responses.
 
