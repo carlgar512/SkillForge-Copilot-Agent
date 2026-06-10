@@ -12,7 +12,7 @@ The project is designed for the **Enterprise Agents for Microsoft 365 Copilot** 
 
 Demo video link:
 
-https://youtu.be/p12uRmfG_UU
+[SkillForge Copilot Agent Demo | Microsoft Agents League Enterprise Agents](https://youtu.be/p12uRmfG_UU)
 
 The demo video shows the Copilot Studio agent configuration, synthetic knowledge grounding, manager-facing readiness responses, topic routing, and Responsible AI boundary behavior.
 
